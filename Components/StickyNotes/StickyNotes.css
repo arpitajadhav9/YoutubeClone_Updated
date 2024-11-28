@@ -1,0 +1,62 @@
+/* StickyNotes.css */
+
+.sticky-notes {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    background-color: #fffbe6;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure StickyNotes are above other content */
+  }
+  
+  .sticky-notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .sticky-notes-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .sticky-notes-header button {
+    background-color: #ffda47;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sticky-notes-header button:hover {
+    background-color: #ffc107;
+  }
+  
+  .sticky-notes-textarea {
+    width: 100%;
+    height: 300px; /* Increased height of textarea */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    resize: vertical;
+    background-color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sticky-notes-textarea:focus {
+    outline: none;
+    border-color: #ffda47;
+    box-shadow: 0 0 0 2px rgba(255, 218, 71, 0.5);
+  }
+  

@@ -1,0 +1,119 @@
+/* Default styles for the app container */
+.app-container {
+    position: relative;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+/* Study Mode styles */
+.app-container.study-mode .feed-section {
+    display: none; /* Hide the feed section in Study Mode */
+}
+
+/* White screen overlay when Study Mode is on */
+.app-container.study-mode .black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Change to white background */
+    z-index: 999; /* Lower than the navbar */
+    display: block; /* Show white screen in Study Mode */
+}
+
+/* Ensure the navbar is visible above the white screen */
+.app-container .navbar {
+    position: relative; /* Ensure navbar stays on top */
+    z-index: 1000; /* Higher z-index than the white screen */
+}
+
+/* Style for the study mode toggle button */
+.study-mode-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1001; /* Ensure it's above the white screen */
+}
+
+/* Additional styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Styles for Todo feature */
+
+/* Container for Todo page */
+.todo-page-container {
+    padding: 2rem;
+    background: #1A1A40;
+    min-height: 100vh; /* Ensure full viewport height for Todo page */
+}
+
+/* Todo form styles */
+.todo-form {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.todo-input {
+    outline: none;
+    background: none;
+    border: 1px solid #ba3030;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    color: #fff;
+}
+
+.todo-input::placeholder {
+    color: #ffffff4d;
+}
+
+.todo-btn {
+    background: #ba3030;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+}
+
+/* Styles for individual Todo items */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ba3030;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.todo-item .incompleted {
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo-item .completed {
+    color: #c5aeff;
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+.todo-item .edit-icon,
+.todo-item .delete-icon {
+    cursor: pointer;
+}
+
+.todo-item .fa-trash {
+    margin-left: 0.75rem;
+}

@@ -1,0 +1,52 @@
+/* Main Container */
+.feed-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 50px;
+    max-height: calc(100vh - 100px); /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding to the container */
+    box-sizing: border-box; /* Ensure padding does not affect size */
+}
+
+/* Hide container when study mode is active */
+.feed-hidden {
+    display: none;
+}
+
+/* Card */
+.feed-card-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.feed-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 5px 0;
+}
+
+.feed-card-channel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin: 6px 0;
+}
+
+.feed-card p {
+    font-size: 14px;
+}
+
+/* Black Screen */
+.feed-black-screen {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Ensure it's above other content */
+}

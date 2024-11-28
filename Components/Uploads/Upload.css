@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+.upload-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f35d5d, #fb5353);
+  padding-top: 2rem;
+  margin: 0;
+  position: relative; /* Needed for pseudo-element */
+}
+
+.upload-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #c62828, #FFB2B2);
+  opacity: 0.3;
+  z-index: -1;
+  animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.upload-page .container {
+  padding: 2.5rem;
+  padding-top: 0rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 450px;
+  margin: 2rem 0;
+}
+
+.upload-page header {
+  padding: 2.2rem;
+  text-align: center;
+}
+
+.upload-page header h1 {
+  color: #3c4043;
+  font-size: 1.8rem;
+  color: rgb(199, 67, 67);
+  margin-bottom: 0.5rem;
+}
+
+.upload-page header p {
+  color: #858a92;
+  font-size: 1rem;
+}
+
+.upload-page .titleDescription {
+  margin-bottom: 20px;
+}
+
+.upload-page .titleDescription input,
+.upload-page .titleDescription textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-page .titleDescription input:focus,
+.upload-page .titleDescription textarea:focus {
+  border-color: rgb(199, 67, 67);
+  box-shadow: 0 0 5px rgba(199, 67, 67, 0.3);
+  outline: none;
+}
+
+.upload-page .dropArea {
+  border: 2px dashed #c2d9f9;
+  border-radius: 0.5rem;
+  width: 100%;
+  position: relative;
+  transition: 0.3s ease;
+  transition-property: background-color, border;
+  user-select: none;
+  background-color: #f9f9f9;
+}
+
+.upload-page .dropArea .contentHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #858a92;
+}
+
+.upload-page .dropArea .contentHolder img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.upload-page .dropArea .contentHolder p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-page .dropArea .contentHolder span {
+  font-size: 0.9rem;
+  color: #a0a5ad;
+}
+
+.upload-page .dropArea .contentHolder button {
+  border: none;
+  outline: none;
+  background-color: rgb(199, 67, 67);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-page .dropArea .contentHolder button:hover {
+  background-color: rgb(179, 57, 57);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-page .dropArea .contentHolder input {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.upload-page .dropArea.content-over {
+  border: 2px solid #8eb8ff;
+  background-color: #c2d9f952;
+}
+
+.upload-page .uploadedFileCont {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.upload-page .uploadedFileCont .uploadedFile {
+  display: grid;
+  grid-template-columns: auto 30px;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem 1rem;
+  background-color: rgba(82, 179, 171, 0.1);
+  border-radius: 0.4rem;
+  user-select: none;
+  margin: 10px 0;
+}
+
+.upload-page .uploadedFileCont .uploadedFile .fileName p {
+  color: rgb(199, 67, 67);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.upload-page .uploadedFileCont .uploadedFile .fileName span {
+  font-size: 0.9rem;
+  color: #858a92;
+  margin-left: 5px;
+}
+
+.upload-page .uploadedFileCont .uploadedFile .closeBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-page .uploadedFileCont .uploadedFile .closeBtn ion-icon {
+  color: #dc3545;
+  font-size: 20px;
+}
+
+.upload-page .uploadBtnCont {
+  width: 100%;
+  margin-top: 10px;
+  display: none;
+}
+
+.upload-page .uploadBtn {
+  border: none;
+  outline: none;
+  background-color: rgb(199, 67, 67);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  float: right;
+  text-align: right;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-page .uploadBtn:hover {
+  background-color: rgb(179, 57, 57);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-page .uploadBtnCont.content-here {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.upload-page .uploadMessage {
+  margin-top: 20px;
+  font-size: 16px;
+  color: green;
+}

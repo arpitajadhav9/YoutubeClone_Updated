@@ -1,0 +1,87 @@
+/* src/pages/TodoPage.css */
+.todo-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  height: 100vh;
+  background-color: #1A1A40; /* Background color for the entire page */
+  margin: 0; /* Remove default margin */
+}
+
+.todo-page-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  padding: 20px;
+  width: 100%; /* Make container full width */
+  max-width: 500px; /* Optional: limit maximum width */
+  margin-top: 20px; /* Adjust top margin to move container higher */
+}
+
+.TodoWrapper {
+  background: #1A1A40;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 100%; /* Make wrapper full width */
+}
+
+.TodoForm {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Align items vertically center */
+  width: 100%;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #ba3030;
+  padding: 0.5rem 1rem;
+  margin-right: 0; /* Remove right margin */
+  flex: 1; /* Make input flexible to take available space */
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-btn {
+  background: #ba3030;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  margin-left: 0; /* Remove left margin */
+  margin-bottom: 17px;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ba3030;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}

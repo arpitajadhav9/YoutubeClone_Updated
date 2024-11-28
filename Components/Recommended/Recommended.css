@@ -1,0 +1,49 @@
+.recommended {
+    flex-basis: 30%;
+    margin-top: 50px;
+    max-height: 100vh; /* Ensure container height is set */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding to the container */
+    box-sizing: border-box; /* Ensure padding does not affect size */
+}
+
+.side-video-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: inherit;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.side-video-list img {
+    width: 120px; /* Adjust width as needed */
+    height: 90px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between image and text */
+    
+   
+}
+
+.vid-info {
+    flex-basis: 49%;
+}
+
+.vid-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color: red; /* Style for error messages */
+}
+
+@media (max-width: 900px) {
+    .recommended {
+        flex-basis: 100%;
+    }
+
+    .side-video-list img {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+}
